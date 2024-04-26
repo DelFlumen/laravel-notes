@@ -33,7 +33,7 @@ class NoteController extends Controller
         $data['user_id'] = 1;
         $note = Note::create($data);
 
-        return to_route('note', $note)->with('message', 'Note was created');
+        return to_route('note.show', $note)->with('message', 'Note was created');
     }
 
     /**
